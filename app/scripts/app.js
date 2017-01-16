@@ -1,11 +1,13 @@
 import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
-import './jquery-ui.js';
+import 'jquery-ui';
+import autosize from 'autosize';
 
 $(() => {
 	svg4everybody();
 });
 
+// slider
 const sliderValue = [1, 4, 8, 16];
 
 $(function () {
@@ -20,3 +22,6 @@ $(function () {
 		}
 	});
 });
+
+// textarea autosize
+autosize($('.about__textarea'));

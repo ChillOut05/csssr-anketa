@@ -44,6 +44,10 @@ export default function makeWebpackConfig({
 			modulesDirectories: [
 				'node_modules'
 			],
+			alias: {
+				'jquery-ui': 'jquery-ui-dist/jquery-ui.js',
+				modules: path.join(__dirname, 'node_modules')
+			},
 			extensions: ['.js', '']
 		},
 		module: {
@@ -73,6 +77,11 @@ export default function makeWebpackConfig({
 				threads: 4,
 				verbose: false,
 				cache: true
+			}),
+			new webpack.ProvidePlugin({
+				'$':'jquery',
+				'jQuery':'jquery',
+				'window.jQuery':'jquery'
 			}),
 			new webpack.DefinePlugin({
 				'process.env': {
