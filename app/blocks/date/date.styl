@@ -1,0 +1,32 @@
+.date
+	&
+		display flex
+
+		padding-bottom 60px
+
+	&__title
+		font-size 22px
+		font-weight 700
+		line-height 47px
+		color $title
+
+	&__time
+		position relative
+		width 215px
+
+		padding-left 19px
+
+		overflow hidden
+
+		font-family $courier
+		font-size 30px
+		line-height 22px
+
+		&:before
+			position absolute
+			content ''
+
+			left 9px
+			bottom 13px
+
+			sprite $line
