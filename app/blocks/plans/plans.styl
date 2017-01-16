@@ -1,0 +1,45 @@
+.plans
+	&
+		padding-bottom 88px
+
+	&__subtitle
+		margin-bottom 12px
+
+	&__list
+		display flex
+
+	&__item
+		margin-right 21px
+
+	&__label
+		display block
+		font-size 20px
+		font-weight 700
+		line-height 25px
+		color #000
+
+	&__input
+		position absolute
+		left -9999px
+
+	&__input + label
+		position relative
+		padding-left 32px
+
+	&__input + label:before
+		position absolute
+		content ''
+
+		top 0
+		left 0
+
+		sprite $radio
+
+	&__input:checked + label:after
+		position absolute
+		content ''
+
+		top 7px
+		left 7px
+
+		sprite $radio_active
