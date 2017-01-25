@@ -6,10 +6,29 @@
 	&__logo
 		margin-top 62px
 
-		sprite $logo
+		sprite ($logo)
 
 	&__stamp
 		margin-top 48px
 		margin-right -63px
-		
-		sprite $stamp
+
+		sprite ($stamp)
+
+@media (max-width 600px)
+	.header
+		&__stamp
+			margin-right 0
+
+@media (max-width 475px)
+	.header
+		&
+			flex-direction column
+			align-items center
+
+		&__logo
+			margin 20px auto
+			order 2
+
+		&__stamp
+			margin-top 30px
+			order 1
