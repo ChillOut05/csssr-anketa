@@ -7,26 +7,50 @@
 	&__title
 		font-size 22px
 		font-weight 700
-		line-height 2.15
+		line-height 1.2
 		color $title
 
 	&__time
 		position relative
 		width 215px
 
+		margin-top -16px
 		padding-left 19px
 
 		overflow hidden
 
 		font-family $courier
 		font-size 30px
-		line-height .79
 
 		&:before
 			position absolute
 			content ''
 
 			left 9px
-			bottom 13px
+			bottom 3px
 
-			sprite $line
+			sprite ($line)
+
+@media (max-width 900px)
+	.date
+		&__title
+			font-size 20px
+
+		&__time
+			font-size 28px
+
+@media (max-width 450px)
+	.date
+		&
+			flex-direction column
+
+		&__title
+			font-size 20px
+
+		&__time
+			margin-top 0
+			padding-left 10px
+			line-height 1.8
+
+			&:before
+				left 0
