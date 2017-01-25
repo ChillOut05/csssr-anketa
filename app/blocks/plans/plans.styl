@@ -18,6 +18,9 @@
 		line-height 1.25
 		color #000
 
+		&:hover
+			cursor pointer
+
 	&__input
 		position absolute
 		left -9999px
@@ -28,18 +31,35 @@
 
 	&__input + label:before
 		position absolute
-		content ''
 
 		top 0
 		left 0
 
-		sprite $radio
+		content ''
+
+		sprite ($radio)
 
 	&__input:checked + label:after
 		position absolute
-		content ''
 
 		top 7px
 		left 7px
+		
+		content ''
 
-		sprite $radio_active
+		sprite ($radio_active)
+
+@media (max-width 900px)
+	.plans
+		&__list
+			flex-direction column
+
+		&__label
+			font-size 16px
+
+		&__item
+			margin-right 0
+			margin-bottom 21px
+
+			&:last-child
+				margin-bottom 0
