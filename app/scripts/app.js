@@ -9,6 +9,7 @@ $(() => {
 
 // slider
 const sliderValue = [1, 4, 8, 16];
+const sliderValueMobile = [1, 9, 13, 16];
 
 $(function () {
 	$( '.slider__range' ).slider({
@@ -18,7 +19,25 @@ $(function () {
 		step: 1,
 		animate: 300,
 		slide: function ( event, ui ) {
-			if ( sliderValue.indexOf(ui.value) === -1 )return false;
+			if ( sliderValue.indexOf(ui.value) === -1 ) {
+				return false;
+			}
+		}
+	});
+});
+
+$(function () {
+	$( '.slider__range_mobile' ).slider({
+		orientation: 'vertical',
+		value: 13,
+		min: 1,
+		max: 16,
+		step: 1,
+		animate: 300,
+		slide: function ( event, ui ) {
+			if ( sliderValueMobile.indexOf(ui.value) === -1 ) {
+				return false;
+			}
 		}
 	});
 });
