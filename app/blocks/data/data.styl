@@ -28,13 +28,13 @@
 		overflow hidden
 
 		&:before
-			content ''
-
 			position absolute
 			bottom 2px
+			
+			content ''
 
 			background-repeat no-repeat
-			sprite $line
+			sprite ($line)
 
 	&__input
 		display block
@@ -52,3 +52,17 @@
 		color #231f20
 
 		text-indent 18px
+
+@media (max-width 900px)
+	.data
+		&
+			font-size 18px
+
+		&__input
+			font-size 26px
+
+			&-container
+				height 36px
+
+		&__item
+			flex-direction column
