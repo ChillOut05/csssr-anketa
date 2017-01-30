@@ -7,24 +7,26 @@ $(() => {
 	svg4everybody();
 });
 
-// slider
+// slider desktop
 const sliderValue = [1, 4, 8, 16];
-const sliderValueMobile = [1, 9, 13, 16];
 
 $(function () {
-	$( '.slider__range' ).slider({
+	$( '.slider__range_desktop' ).slider({
 		value: 4,
 		min: 1,
 		max: 16,
 		step: 1,
 		animate: 300,
-		slide: function ( event, ui ) {
+		slide: ( event, ui ) => {
 			if ( sliderValue.indexOf(ui.value) === -1 ) {
 				return false;
 			}
 		}
 	});
 });
+
+// slider mobile
+const sliderValueMobile = [1, 9, 13, 16];
 
 $(function () {
 	$( '.slider__range_mobile' ).slider({
@@ -34,7 +36,7 @@ $(function () {
 		max: 16,
 		step: 1,
 		animate: 300,
-		slide: function ( event, ui ) {
+		slide: ( event, ui ) => {
 			if ( sliderValueMobile.indexOf(ui.value) === -1 ) {
 				return false;
 			}
